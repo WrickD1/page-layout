@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout Method</title>
+    <style>
+        body{
+            background-color: rgb(37, 37, 122);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        ul{
+            list-style: none;
+            
+        }
+
+        a{
+            color: white;
+        }
+
+        a:hover{
+            color: red;
+        }
+
+        .container > ul{
+            display: flex;
+            flex-direction: row;
+            gap: 5%;
+            justify-content: center;
+        }
+
+        @media (max-width: 450px){
+            .container > ul{
+                display: flex;
+                flex-direction: row-reverse;
+                flex: wrap;
+                gap: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Different methods of page layout</h1>
+    <div class="container">
+        <ul>
+            <li><a href="./public/absolute.html">Absolute Positioning</a></li>
+            <li><a href="./public/flex.html">Flexbox</a></li>
+            <li><a href="./public/inline-block.html">Inline-block</a></li>
+            <li><a href="./public/table.html">HTML-table data</a></li>
+            <li><a href="./public/float.html">Float</a></li>
+        </ul>
+    </div>
+</body>
+</html>
